@@ -4,6 +4,7 @@ on: [push, pull_request] # Runs this workflow on push and pull requests
 
 jobs:
   test-and-publish:
+    name: Test and Publish Report
     runs-on: ubuntu-latest
 
     steps:
