@@ -28,7 +28,10 @@ export interface Planet {
         typeof planet.surface_water === 'string' &&
         typeof planet.population === 'string' &&
         Array.isArray(planet.residents) &&
-        Array.isArray(planet.films)
+        Array.isArray(planet.films) &&
+        typeof planet.created === 'string' &&
+        typeof planet.edited === 'string' &&
+        typeof planet.url === 'string'
       );
     }
   }
