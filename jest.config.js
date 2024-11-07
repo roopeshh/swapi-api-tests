@@ -1,16 +1,16 @@
 module.exports = {
-  preset: "ts-jest",
-  testEnvironment: "node",
-  roots: ["<rootDir>/src"],
-  testMatch: ["**/tests/**/*.ts"],
-  moduleFileExtensions: ["ts", "js", "json", "node"],
+  preset: 'ts-jest',
+  testEnvironment: 'node',
+  roots: ['<rootDir>/src'],
+  testMatch: ['**/tests/**/*.ts'],
+  moduleFileExtensions: ['ts', 'js', 'json', 'node'],
   reporters: [
-    "default",
+    'default',
     [
-      "jest-html-reporters",
+      'jest-html-reporters',
       {
-        publicPath: "./report",
-        filename: "report.html",
+        publicPath: './report',
+        filename: 'report.html',
       },
     ],
   ],

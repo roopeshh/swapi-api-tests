@@ -33,6 +33,8 @@ describe('SWAPI People Endpoints', () => {
   });
 
   it('should handle non-existent person', async () => {
-    await expect(swapiClient.getPerson(999999)).rejects.toThrow('Request failed with status code 404');
+    await expect(swapiClient.getPerson(999999)).rejects.toThrow(
+      'Request failed with status code 404',
+    );
   });
 });

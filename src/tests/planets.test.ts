@@ -13,7 +13,7 @@ describe('SWAPI Planets Endpoints', () => {
     const tatooine: Planet = await swapiClient.getPlanet(1);
 
     expect(PlanetValidator.isValid(tatooine)).toBe(true);
-    
+
     expect(tatooine.name).toBe('Tatooine');
     expect(tatooine.rotation_period).toBe('23');
     expect(tatooine.orbital_period).toBe('304');
@@ -30,6 +30,8 @@ describe('SWAPI Planets Endpoints', () => {
   });
 
   it('should handle non-existent planet', async () => {
-    await expect(swapiClient.getPlanet(999999)).rejects.toThrow('Request failed with status code 404');
+    await expect(swapiClient.getPlanet(999999)).rejects.toThrow(
+      'Request failed with status code 404',
+    );
   });
 });
