@@ -13,5 +13,12 @@ module.exports = {
         filename: 'report.html',
       },
     ],
+    [
+      'jest-junit',
+      {
+        outputDirectory: './report',
+        outputName: 'junit-report.xml',
+      },
+    ],
   ],
 };
