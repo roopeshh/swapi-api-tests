@@ -13,7 +13,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "22"
+          node-version: '22'
 
       - name: Install dependencies
         run: yarn
@@ -26,18 +26,18 @@ jobs:
         if: always()
         with:
           name: test-report
-          path: ./report/
+          path: ./html-report/
       - name: Upload xml reports
         uses: actions/upload-artifact@v4
         if: always()
         with:
           name: test-report
-          path: ./report/junit-report.xml
+          path: ./xml-report/junit-report.xml
       - name: API Test Report
         uses: dorny/test-reporter@v1
         if: always()
         with:
           name: API Test Report
-          path: ./report/junit-report.xml
+          path: ./xml-report/junit-report.xml
           reporter: java-junit
           fail-on-error: true

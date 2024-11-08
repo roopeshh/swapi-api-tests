@@ -9,14 +9,14 @@ module.exports = {
     [
       'jest-html-reporters',
       {
-        publicPath: './report',
+        publicPath: './html-report',
         filename: 'report.html',
       },
     ],
     [
       'jest-junit',
       {
-        outputDirectory: './report',
+        outputDirectory: './xml-report',
         outputName: 'junit-report.xml',
       },
     ],
