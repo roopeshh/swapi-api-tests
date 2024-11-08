@@ -6,7 +6,9 @@ jobs:
   test-and-publish:
     name: Test and Publish Report
     runs-on: ubuntu-latest
-
+    permissions:
+      checks: write
+      contents: read
     steps:
       - uses: actions/checkout@v4
 
@@ -35,3 +37,4 @@ jobs:
           path: ./report/junit-report.xml
           reporter: jest-junit
           fail-on-error: true
+          token: ${{ secrets.GITHUB_TOKEN }}
