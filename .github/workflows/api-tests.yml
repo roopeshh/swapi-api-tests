@@ -21,23 +21,17 @@ jobs:
       - name: Run tests
         run: yarn test
 
-      - name: Upload html reports
+      - name: Upload reports
         uses: actions/upload-artifact@v4
         if: always()
         with:
           name: test-report
-          path: ./html-report/
-      - name: Upload xml reports
-        uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: test-report
-          path: ./xml-report/junit-report.xml
+          path: ./report/
       - name: API Test Report
         uses: dorny/test-reporter@v1
         if: always()
         with:
           name: API Test Report
-          path: ./xml-report/junit-report.xml
+          path: ./report/junit-report.xml
           reporter: java-junit
           fail-on-error: true

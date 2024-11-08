@@ -9,7 +9,7 @@ module.exports = [
   prettierConfig,
   {
     files: ['**/*.js', '**/*.ts'],
-    ignores: ['node_modules/**', 'html-report/**', 'xml-report/**'],
+    ignores: ['node_modules/**', 'report/**'],
     languageOptions: {
       parser: tseslint.parser,
       parserOptions: {
