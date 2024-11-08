@@ -13,7 +13,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: "22"
 
       - name: Install dependencies
         run: yarn
@@ -33,5 +33,5 @@ jobs:
         with:
           name: API Test Report
           path: ./report/junit-report.xml
-          reporter: java-junit
+          reporter: jest-junit
           fail-on-error: true
