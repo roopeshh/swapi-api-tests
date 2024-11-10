@@ -1,5 +1,5 @@
 import { createSwapiClient, ISwapiClient } from '../api/swapiClient';
-import { Planet, PlanetValidator } from '../models/planets';
+import { Planet, PlanetValidator } from '../models/planet';
 import { isValidUrl, ResponseValidator } from '../utils/testHelpers';
 
 describe('SWAPI Planets Endpoints', () => {

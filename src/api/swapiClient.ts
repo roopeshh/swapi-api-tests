@@ -1,7 +1,7 @@
 import axios, { AxiosInstance } from 'axios';
 import config from '../config/config';
 import { Person } from '../models/person';
-import { Planet } from '../models/planets';
+import { Planet } from '../models/planet';
 
 export interface ISwapiClient {
   getPerson(id: number): Promise<Person>;
